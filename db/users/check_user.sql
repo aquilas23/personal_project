@@ -1,0 +1,1 @@
+SELECT * FROM ppusers WHERE email= ${email};

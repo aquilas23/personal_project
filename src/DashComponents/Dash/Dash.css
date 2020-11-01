@@ -1,0 +1,197 @@
+.area {
+  padding-right: 30px;
+  text-decoration: none;
+  float: right;
+}
+
+.area nav {
+  display: inline-block;
+  padding: 25px;
+  text-decoration: none;
+  padding-right: 20px;
+}
+
+.sms {
+  display: inline-block;
+  position: relative;
+  height: 15px;
+  width: 15px;
+}
+
+.sms i{
+  color: white;
+}
+.circle {
+  background-color: red;
+  width: 15px;
+  height: 13px;
+  display: inline-block;
+  border-radius: 60%;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  top: 17px;
+  right: -2px;
+  position: absolute;
+}
+
+.img {
+  background: url("https://randomuser.me/api/portraits/men/86.jpg") no-repeat
+    center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.new-task {
+  font-size: 20px;
+  font-weight: 500px;
+  padding-top: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.new-task:hover {
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 10px;
+  color: blue;
+}
+
+.heading-dash h1 {
+  color: purple;
+  padding-top: 100px;
+  font-size: 1.4rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.heading-dash p {
+  color: gray;
+  margin-bottom: 10px;
+  font-size: 0.8rem;
+}
+
+
+
+.card-3 {
+  width: 30%;
+  padding: 0 15px;
+  background-color: rgb(231, 220, 220);
+  border-radius: 5px;
+  height: 100%;
+  margin: 10px;
+  display: inline-block;
+}
+
+.user-img {
+  background: url("https://randomuser.me/api/portraits/men/86.jpg") no-repeat
+    center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.user-name {
+  font-size: 1rem;
+  color: blueviolet;
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.user-title {
+  font-size: 0.7rem;
+  color: black;
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.user-education {
+  width: 25%;
+  padding: 0 15px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.1rem;
+  display: inline-block;
+}
+.user-pro {
+  font-size: 1rem;
+}
+
+.user-experience {
+  margin: 5px;
+  text-align: center;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+.user-work {
+  background-color: rgb(187, 173, 163);
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+  border-left: 5px solid green;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.user-pro {
+  font-size: 1rem;
+}
+.date {
+  text-align: center;
+  font-size: 1rem;
+  color: red;
+  font-weight: bold;
+  display: block;
+  border-left: 5px solid red;
+  padding: 5px 10px;
+  margin: 20px 0;
+}
+.contacts {
+  margin: 5px;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.4rem;
+}
+
+.cs {
+  margin: 20px;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  color: blue;
+}
+
+.num {
+  margin: 7px;
+  text-align: center;
+  font-size: small;
+}
+.email {
+  margin: 7px;
+  text-align: center;
+  font-size: small;
+}
+
+table {
+  background-color: rgb(192, 179, 179);
+}
+
+.content-box {
+  background-color: rgb(202, 191, 191);
+  height: 80px;
+  width: auto;
+  margin: 5px;
+}
+.each-task {
+  background-color: white;
+  padding: 10px;
+}
