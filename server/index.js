@@ -6,6 +6,7 @@ const app = express();
 
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET } = process.env;
 const mainCtrl = require('./controller');
+const path = require('path')
 
 app.use(express.json());
 
@@ -93,6 +94,12 @@ massive({
 app.post('/api/register', mainCtrl.register);
 app.post("/api/login", mainCtrl.login);
 app.get("/api/logout", mainCtrl.logout);
+
+app.use(express.static(__dirname + '/../build'))
+app.get('*', (req, res) => {
+  res.sendFile(path.join (__dirname + '../build/index.html'))
+})
+
 
 app.post("/api/task", mainCtrl.createtask);
 app.get("/api/tasks", mainCtrl.getUsertasks);
