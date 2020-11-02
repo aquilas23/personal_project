@@ -46,23 +46,19 @@ class Dash extends Component {
   };
 
   render() {
+    console.log(this.state.tasks);
     const mappedtasks = this.state.tasks.map((task) => (
       <div key={task.task_id} className="task-box">
-        <AllTask
-          deletetask={this.deletetask}
-          updatetask={this.updatetask}
-          task={task}
-        />
-      </div>
+        <AllTask deletetask={this.deletetask} updatetask={this.updatetask} task={task}/> </div>
     ));
     return (
-      <section className="dash-all">
+    <section className="dash-all">
         <Header />
         <header>
           <div className="area">
             <Link to="/AddTask">
               <nav className="new-task">
-                <i class="fa fa-edit" aria-hidden="true"></i>+ Add new Task
+                <i className="fa fa-edit" aria-hidden="true"></i>+ Add new Task
               </nav>
             </Link>
             <nav className="sms">
@@ -129,6 +125,7 @@ class Dash extends Component {
             <thead>
               <tr>
                 <th>ORDER</th>
+                <th>Name</th>
                 <th className="content-box">CONTENT</th>
                 <th>DEADLINE</th>
               </tr>
@@ -136,8 +133,8 @@ class Dash extends Component {
 
             <tbody>
               <td> #123456</td>
+              <td> Aquilas Aguiya </td>
               <td>
-                {" "}
                 <div className="tasks">{mappedtasks}</div>
               </td>
               <td> December 31, 2020</td>

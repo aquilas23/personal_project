@@ -2,6 +2,7 @@
   padding-right: 30px;
   text-decoration: none;
   float: right;
+  
 }
 
 .area nav {
@@ -74,8 +75,6 @@
   font-size: 0.8rem;
 }
 
-
-
 .card-3 {
   width: 30%;
   padding: 0 15px;
@@ -93,8 +92,8 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   margin: 0 auto;
 }
@@ -123,7 +122,9 @@
   display: inline-block;
 }
 .user-pro {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  margin-top: 21px;
+  
 }
 
 .user-experience {
@@ -139,8 +140,10 @@
   text-align: center;
   border-radius: 5px;
   border-left: 5px solid green;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
+  margin-bottom: 5px;
+  
 }
 .user-pro {
   font-size: 1rem;
@@ -153,17 +156,18 @@
   display: block;
   border-left: 5px solid red;
   padding: 5px 10px;
-  margin: 20px 0;
+  margin: 22px 0;
 }
 .contacts {
-  margin: 5px;
+  margin-top: 15px;
   text-align: center;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
 }
 
 .cs {
-  margin: 20px;
+  margin: 15px;
   text-align: center;
   font-size: large;
   font-weight: bold;
@@ -176,13 +180,15 @@
   font-size: small;
 }
 .email {
-  margin: 7px;
+  margin: 5px;
   text-align: center;
   font-size: small;
 }
 
 table {
   background-color: rgb(192, 179, 179);
+  margin-top: 30px;
+  margin-left: 9px;
 }
 
 .content-box {

@@ -9,13 +9,13 @@ const Router =
 
 ReactDOM.render(
   <Provider store={store}>
-    <HashRouter>
+    {/* <HashRouter> */}
       <React.StrictMode>
         <Router>
         <App />
         </Router>
       </React.StrictMode>
-    </HashRouter>
+    {/* </HashRouter> */}
   </Provider>,
   document.getElementById("root")
 );
