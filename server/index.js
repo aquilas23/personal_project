@@ -15,13 +15,13 @@ const socketio = require("socket.io");
 const cors = require("cors");
 
 const { addUser, removeUser, getUser, getUsersIngroup } = require("./users.js");
-const router = require("./router");
+// const router = require("./router");
 
 const server = http.createServer(app);
 const io = socketio(server);
 
 app.use(cors());
-app.use(router);
+// app.use(router);
 
 io.on("connect", (socket) => {
   socket.on("join", ({ name, group }, callback) => {
