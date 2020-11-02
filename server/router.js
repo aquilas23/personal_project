@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/' , (req, res) => {
+router.get('/join' , (req, res) => {
     res.send('Chat server running');
 });
 

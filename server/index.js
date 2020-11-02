@@ -5,8 +5,8 @@ const session = require("express-session");
 const app = express();
 
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET } = process.env;
-const mainCtrl = require('./controller');
-const path = require('path')
+const mainCtrl = require("./controller");
+const path = require("path");
 
 app.use(express.json());
 
@@ -73,7 +73,8 @@ io.on("connect", (socket) => {
   });
 });
 
-app.use(session({
+app.use(
+  session({
     resave: false,
     saveUninitialized: true,
     secret: SESSION_SECRET,
@@ -85,24 +86,23 @@ massive({
   connectionString: CONNECTION_STRING,
   ssl: { rejectUnauthorized: false },
 }).then((db) => {
-
   app.set("db", db);
   console.log("db connected");
-  server.listen(process.env.PORT || 5000, () => console.log(`Server has started on port ${SERVER_PORT}`));
+  server.listen(SERVER_PORT, () =>
+    console.log(`Server has started on port ${SERVER_PORT}`)
+  );
 });
 
-app.post('/api/register', mainCtrl.register);
+app.post("/api/register", mainCtrl.register);
 app.post("/api/login", mainCtrl.login);
 app.get("/api/logout", mainCtrl.logout);
 
-app.use(express.static(__dirname + '/../build'))
-app.get('*', (req, res) => {
-  res.sendFile(path.join (__dirname + '../build/index.html'))
-})
-
+app.use(express.static(__dirname + "/../build"));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build/index.html"));
+});
 
 app.post("/api/task", mainCtrl.createtask);
 app.get("/api/tasks", mainCtrl.getUsertasks);
 app.delete("/api/task/:id", mainCtrl.deletetask);
 app.put("/api/task/:id", mainCtrl.updatetask);
-
