@@ -68,12 +68,15 @@
     width:100%;
     padding:1em;
     border:1px solid #c9e6ff;
+
   }
   
   .contact form button{
     background:#c9e6ff;
     border:0;
     text-transform: uppercase;
+    margin: 10px;
+    cursor: pointer;
   }
   
   .contact form button:hover,.contact form button:focus{

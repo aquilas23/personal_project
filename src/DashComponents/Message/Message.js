@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./Message.css";
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 
 export default class Message extends Component {
       state ={
@@ -55,8 +56,9 @@ export default class Message extends Component {
             smsSent:true,
           },this.resetForm())
           }).catch(()=> {
+            
+            console('message not sent');
             this.props.history.push('/dash')
-            // console('message not sent');
         })
       }
       resetForm =() => {
@@ -71,7 +73,7 @@ export default class Message extends Component {
           this.setState({
             smsSent:false,
           })
-        }, 4000)
+        }, 3000)
       }
 
 
@@ -123,7 +125,8 @@ export default class Message extends Component {
 
           <div className={this.state.smsSent ? 'msgAppear' : 'msg'}>Message Sent</div>
           <p className="submit">
-            <button type="submit">Submit</button>
+           <button type="submit">Submit</button>
+           <Link to="/dash"><button type="submit">Go Back Home</button></Link>
           </p>
         </form>
       </div>

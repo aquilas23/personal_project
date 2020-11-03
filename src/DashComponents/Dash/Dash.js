@@ -16,9 +16,9 @@ class Dash extends Component {
 
   componentDidMount() {
     this.getUsertasks();
-    // if (!this.props.user.email) {
-    //   this.props.history.push("/");
-    // }
+    if (!this.props.user.email) {
+      this.props.history.push("/");
+    }
   }
 
   getUsertasks = () => {
@@ -58,7 +58,7 @@ class Dash extends Component {
           <div className="area">
             <Link to="/AddTask">
               <nav className="new-task">
-                <i className="fa fa-edit" aria-hidden="true"></i>+ Add new Task
+                <i className="fa fa-edit" aria-hidden="true"></i>+ Add new Project
               </nav>
             </Link>
             <nav className="sms">

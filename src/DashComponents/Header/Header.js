@@ -56,7 +56,7 @@ export default class Header extends Component {
           </Link>
           <Link to="/">
             <nav className="btn-active" onClick={this.handleLogout}>
-              <i class="fa fa-sign-out"></i>Logout
+              <i className="fa fa-sign-out"></i>Logout
             </nav>
           </Link>
         </section>

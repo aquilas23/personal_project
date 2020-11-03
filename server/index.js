@@ -120,7 +120,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.get('/', () => {
-  resizeBy.send('Welcome');
+  res.render('Welcome');
 });
 
 app.post('/api/message', (req, res) => {

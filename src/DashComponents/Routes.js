@@ -6,6 +6,8 @@ import Auth from "../DashComponents/Auth/Auth";
 import Dash from "../DashComponents/Dash/Dash";
 import AddTask from "./AddTask/AddTask";
 import Message from "../DashComponents/Message/Message";
+import Profile from "../DashComponents/Profile/Profile";
+
 
 export default (
   <Switch>
@@ -13,6 +15,7 @@ export default (
     <Route path="/dash" component={Dash} />
     <Route path="/addtask" component={AddTask} />
     <Route path="/message" component={Message} />
+    <Route path="/profile" component={Profile} />
     <Route path="/join" component={Join} />
     <Route path="/chat" component={Chat} />
   </Switch>
