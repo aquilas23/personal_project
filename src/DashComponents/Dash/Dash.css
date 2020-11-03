@@ -22,6 +22,7 @@
 .sms i{
   color: white;
 }
+
 .circle {
   background-color: red;
   width: 15px;
@@ -77,12 +78,13 @@
 
 .card-3 {
   width: 30%;
-  padding: 0 15px;
-  background-color: rgb(231, 220, 220);
-  border-radius: 5px;
-  height: 100%;
-  margin: 10px;
+  margin: 15px;
+  /* background-color: rgb(147, 169, 187); */
+  /* border-radius: 5px; */
+  /* height: 100%;
+  margin: 10px; */
   display: inline-block;
+
 }
 
 .user-img {
@@ -107,11 +109,13 @@
 }
 
 .user-title {
-  font-size: 0.7rem;
-  color: black;
+  font-size: 0.9rem;
+  color: rgb(218, 212, 212);
   display: block;
   text-align: center;
   margin: 10px 0;
+  font-family: 'Times New Roman', Times, serif;
+
 }
 
 .user-education {
@@ -120,21 +124,63 @@
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 1.1rem;
   display: inline-block;
+  color: rgb(218, 212, 212);
 }
+/* 
 .user-pro {
   font-size: 0.9rem;
   margin-top: 21px;
-  
+} */
+
+/* @media(max-width: 1639px){
+  .user-pro {
+    font-size: 0.9rem;
+    margin-top: 55px;
+    
+  }
 }
+@media(min-width: 2133px){
+  .user-pro {
+    font-size: 0.9rem;
+    margin-top: 90px;
+    
+  }
+} */
+
+/* 
+@media(max-width: 1029px){
+  .user-pro {
+    font-size: 0.9rem;
+    margin-top: 30px;
+    
+  }
+} */
+/* @media(min-width: 767px){
+  .user-pro {
+    font-size: 0.9rem;
+    margin-top: 11px;
+    
+  }
+} */
+/* @media(max-width: 895px){
+  .user-pro {
+    font-size: 0.9rem;
+    margin-top: 7px;
+    
+  }
+}   */
+
+
 
 .user-experience {
   margin: 5px;
   text-align: center;
   font-size: 0.8rem;
   display: inline-block;
+  color: rgb(218, 212, 212);
 }
 .user-work {
-  background-color: rgb(187, 173, 163);
+  background-color: rgb(170, 163, 187);
   position: relative;
   display: inline-block;
   text-align: center;
@@ -142,11 +188,15 @@
   border-left: 5px solid green;
   font-size: 0.9rem;
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: 0px; 
+  margin-left: 30px;
   
 }
 .user-pro {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  color: rgb(218, 212, 212);
+  font-weight: bold;
+  margin-left: 30px;
 }
 .date {
   text-align: center;
@@ -154,16 +204,20 @@
   color: red;
   font-weight: bold;
   display: block;
-  border-left: 5px solid red;
+  border-left: 3px solid red;
   padding: 5px 10px;
   margin: 22px 0;
+  margin-left: 30px;
 }
 .contacts {
   margin-top: 15px;
   text-align: center;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
+  color: rgb(218, 212, 212);
+  padding-right: 50px;
+  
 }
 
 .cs {
@@ -172,17 +226,23 @@
   font-size: large;
   font-weight: bold;
   color: blue;
+  padding-right: 50px;
 }
 
 .num {
   margin: 7px;
   text-align: center;
-  font-size: small;
+  font-size: 0.9rem;
+  color: rgb(218, 212, 212);
+  padding-right: 50px;
 }
 .email {
   margin: 5px;
   text-align: center;
   font-size: small;
+  color: rgb(218, 212, 212);
+  font-size: 0.9rem;
+  padding-right: 50px;
 }
 
 table {

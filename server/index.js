@@ -4,6 +4,12 @@ const massive = require("massive");
 const session = require("express-session");
 const app = express();
 
+
+const bodyParser =require('body-parser');
+const nodemailer= require('nodemailer');
+const exphbs =require('express-handlebars');
+
+
 const { CONNECTION_STRING, SERVER_PORT, SESSION_SECRET } = process.env;
 const mainCtrl = require("./controller");
 const path = require("path");
@@ -15,13 +21,19 @@ const socketio = require("socket.io");
 const cors = require("cors");
 
 const { addUser, removeUser, getUser, getUsersIngroup } = require("./users.js");
-// const router = require("./router");
+const router = require("./router");
+const SMTPConnection = require("nodemailer/lib/smtp-connection");
+const SMTPTransport = require("nodemailer/lib/smtp-transport");
 
 const server = http.createServer(app);
 const io = socketio(server);
 
+
+app.engine('handlebars', exphbs());
+app.set('view engine', 'handlebars');
+
 app.use(cors());
-// app.use(router);
+app.use(router);
 
 io.on("connect", (socket) => {
   socket.on("join", ({ name, group }, callback) => {
@@ -93,12 +105,62 @@ massive({
   );
 });
 
-app.use(express.static(__dirname + "/../build"));
+app.use('../src/DashComponent',express.static(__dirname + "Message"));
 
 
 app.post("/api/register", mainCtrl.register);
 app.post("/api/login", mainCtrl.login);
 app.get("/api/logout", mainCtrl.logout);
+
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
+
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.get('/', () => {
+  resizeBy.send('Welcome');
+});
+
+app.post('/api/message', (req, res) => {
+  let data =req.body
+  let transporter = nodemailer.createTransport({
+   service: 'gmail',
+    auth: {
+        user: 'aquilas91@gmail.com',
+        pass: 'Comlan11!!'
+    }
+  });
+
+  let mailOptions = {
+      from: data.email, 
+      to: 'aquilas91@gmail.com', 
+      subject: `Message from ${data.name}`,
+      html :
+      `
+    <ul>  
+      <li>Name: ${data.name}</li>
+      <li>Company: ${data.company}</li>
+      <li>Email: ${data.email}</li>
+      <li>Phone: ${data.phone}</li>
+    </ul>
+    <h3>Message</h3>
+    <p>${data.message}</p>
+      `
+  };
+
+  transporter.sendMail(mailOptions, (error) => {
+      if (error) {
+          res.send(error)
+      }else{ res.send('Message Sent!!!')}
+     
+  }) 
+// res.render('sms not sent');
+  });
+
+
+
 
 
 

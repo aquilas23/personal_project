@@ -16,9 +16,9 @@ class Dash extends Component {
 
   componentDidMount() {
     this.getUsertasks();
-    if (!this.props.user.email) {
-      this.props.history.push("/");
-    }
+    // if (!this.props.user.email) {
+    //   this.props.history.push("/");
+    // }
   }
 
   getUsertasks = () => {
@@ -93,8 +93,11 @@ class Dash extends Component {
               </div>
             </div>
             <div className="card-3">
+           
               <div className="user-pro">Task Overview and Deadline </div>
               <p className="date">December 31, 2020</p>
+              <p className="user-work">create a production web Application</p>
+              <p className="user-work">create a production web Application</p>
               <p className="user-work">create a production web Application</p>
               <p className="user-work">create a production web Application</p>
             </div>

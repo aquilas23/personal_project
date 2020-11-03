@@ -10,7 +10,7 @@ const InfoBar = ({ group }) => (
       <h3>{group}</h3>
     </div>
     <div className="rightInnerContainer">
-      <a href="/">
+      <a href="/dash">
         <img src={closeIcon} alt="close" />
       </a>
     </div>
