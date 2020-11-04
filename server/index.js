@@ -118,9 +118,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get('/', () => {
-  resizeBy.send('Welcome');
-});
+
 
 app.post('/api/message', (req, res) => {
   let data =req.body
@@ -159,9 +157,6 @@ app.post('/api/message', (req, res) => {
   smtpTransport.close;
       
   });
-
-
-
 
 
 
