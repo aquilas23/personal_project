@@ -111,7 +111,7 @@ app.post("/api/register", mainCtrl.register);
 app.post("/api/login", mainCtrl.login);
 app.get("/api/logout", mainCtrl.logout);
 
-// app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 app.use(express.static(__dirname + '/../build'));
 

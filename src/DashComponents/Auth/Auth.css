@@ -4,7 +4,9 @@ body {
   padding-left: 15px;
   font-family: sans-serif;
   background: no-repeat url("../../aa.jpg");
-  background-size: 100%;
+  /* background-size: 2000px;
+  background-size: 100%; */
+  
 }
 .auth-view {
   width: 280px;

@@ -17,9 +17,9 @@ class Dash extends Component {
 
   componentDidMount() {
     this.getUsertasks();
-    if (!this.props.user.email) {
-      this.props.history.push("/");
-    }
+    // if (!this.props.user.email) {
+    //   this.props.history.push("/");
+    // }
   }
 
   getUsertasks = () => {
@@ -79,7 +79,7 @@ class Dash extends Component {
             <p>Welcome to your personal task managment dashboard</p>
           </div>
           <div className="cards">
-            <div className="card-3">
+            <div className="card-1">
               <>
                 <div className="user-img"></div>
               </>
@@ -92,16 +92,17 @@ class Dash extends Component {
                 <p className="user-experience">Dev Mountain</p>
               </div>
             </div>
-            <div className="card-3">
+            <div className="card-2">
            
-              <div className="user-pro">Task Overview and Deadline </div>
+              <div className="user-pro">Project Deadline </div>
               <p className="date">December 31, 2020</p>
+              <div className="work-view">
               <p className="user-work">create a production web Application</p>
               <p className="user-work">create a production web Application</p>
               <p className="user-work">create a production web Application</p>
               <p className="user-work">create a production web Application</p>
             </div>
-
+            </div>
             <div className="card-3">
               <p className="contacts"> Contacts Info</p>
               <p className="cs">Customer Service</p>

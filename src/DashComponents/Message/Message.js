@@ -73,7 +73,7 @@ export default class Message extends Component {
           this.setState({
             smsSent:false,
           })
-        }, 3000)
+        }, 1000)
       }
 
 
