@@ -8,11 +8,16 @@ class AddTask extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: "",
+      fullName:"",
+      content: ""
+
     };
   }
   handleInputContent = (val) => {
     this.setState({ content: val });
+  };
+  handleInputFullName = (val) => {
+    this.setState({ fullName: val });
   };
 
   createtask = () => {
@@ -30,7 +35,13 @@ class AddTask extends Component {
   render() {
     return (
       <div className="new-task">
-        <h1>New Task</h1>
+        <h3>Add Project</h3>
+        {/* < input 
+        placeholder='fullName'
+        value={this.state.FullName}
+        onChange={(e) => this.handleInputFullName(e.target.value)}
+
+        /> */}
         <textarea
           value={this.state.content}
           placeholder="Enter Task here"

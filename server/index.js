@@ -105,7 +105,6 @@ massive({
   );
 });
 
-app.use('../src/DashComponent',express.static(__dirname + "Message"));
 
 
 app.post("/api/register", mainCtrl.register);
@@ -116,16 +115,16 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 
 
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get('/', () => {
-  res.render('Welcome');
+  resizeBy.send('Welcome');
 });
 
 app.post('/api/message', (req, res) => {
   let data =req.body
-  let transporter = nodemailer.createTransport({
+  let smtpTransport = nodemailer.createTransport({
    service: 'gmail',
     auth: {
         user: 'aquilas91@gmail.com',
@@ -150,13 +149,15 @@ app.post('/api/message', (req, res) => {
       `
   };
 
-  transporter.sendMail(mailOptions, (error) => {
+  smtpTransport.sendMail(mailOptions, (error, response) => {
       if (error) {
           res.send(error)
-      }else{ res.send('Message Sent!!!')}
+      }else{ 
+        res.send('Message Sent!!!')}
      
   }) 
-// res.render('sms not sent');
+  smtpTransport.close;
+      
   });
 
 

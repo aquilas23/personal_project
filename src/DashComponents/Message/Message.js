@@ -79,16 +79,16 @@ export default class Message extends Component {
 
     render() {
         return (
-            <div class="container">
+            <div className="container">
     <div >
-      <div class="company-info">
+      <div className="company-info">
         <ul>
-          <li><i class="fa fa-road"></i> 17186 Joplin Ave Lakeville MN 55044</li>
-          <li><i class="fa fa-phone"></i> (555) 555-5555</li>
-          <li><i class="fa fa-envelope"></i> stgaquilas@gmail.com</li>
+          <li><i className="fa fa-road"></i> 17186 Joplin Ave Lakeville MN 55044</li>
+          <li><i className="fa fa-phone"></i> (555) 555-5555</li>
+          <li><i className="fa fa-envelope"></i> stgaquilas@gmail.com</li>
         </ul>
       </div>
-      <div class="contact">
+      <div className="contact">
         <h3>Email Us</h3>
         <form onSubmit={this.formSubmit}>
           <p>

@@ -51,7 +51,7 @@ module.exports = {
     const { id } = req.params,
       db = req.app.get("db");
     if (!req.session) return;
-    console.log(req.session.user.is_admin);
+    
     if (req.session.user.is_admin) {
       db.task
         .list()

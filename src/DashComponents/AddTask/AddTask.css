@@ -32,12 +32,12 @@
   background-color: rgb(135, 228, 170);
 }
 
-/* .task-box button:hover {
+.task-box button:hover {
   border-radius: 50px;
   background-color: rgb(116, 235, 223);
   height: 30px;
   width: 100px;
-} */
+}
 
 .task-box button {
   border-radius: 20px;

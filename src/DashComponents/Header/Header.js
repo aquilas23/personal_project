@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import car from "./car.jpg";
+import STG from "./STG.jpg";
 import axios from "axios";
 
 export default class Header extends Component {
@@ -25,14 +25,11 @@ export default class Header extends Component {
   render() {
     return (
       <>
-      <div className="logo"><Link to="/">
-            <img src={car} alt="car" />
+      <div className="logo"><Link to="/dash">
+            <img src={STG} alt="STG" />
            </Link> 
            </div>
         <section className="sideMenu">
-          <Link to="/dash">{/* <img src={car} alt="car" /> */}</Link>
-           
-
           <Link to="/chat">
             <nav className="btn-active">
               <i className="fa fa-comment"></i>Chat

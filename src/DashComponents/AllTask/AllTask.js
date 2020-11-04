@@ -22,7 +22,7 @@ class AllTask extends Component {
         {this.props.user.is_admin ? (
           <>
             <div key={this.props.task.id} className="task-box">
-              <p className="each-task">{this.props.task.task_content}</p>
+        <p className="each-task">{this.props.task.task_id}- {this.props.task.task_content}</p>
             </div>
           </>
         ) : this.state.wasEditClicked ? (

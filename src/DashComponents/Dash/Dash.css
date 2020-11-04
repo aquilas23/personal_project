@@ -38,7 +38,7 @@
 }
 
 .img {
-  background: url("https://randomuser.me/api/portraits/men/86.jpg") no-repeat
+  background: url("../Header/pic.jpg") no-repeat
     center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -88,14 +88,14 @@
 }
 
 .user-img {
-  background: url("https://randomuser.me/api/portraits/men/86.jpg") no-repeat
+  background: url("../Header/pic.jpg") no-repeat
     center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   margin: 0 auto;
 }

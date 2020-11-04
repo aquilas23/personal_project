@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import "./Dash.css";
 import Header from "../Header/Header";
 
+
 class Dash extends Component {
   constructor(props) {
     super(props);
@@ -46,7 +47,6 @@ class Dash extends Component {
   };
 
   render() {
-    console.log(this.state.tasks);
     const mappedtasks = this.state.tasks.map((task) => (
       <div key={task.task_id} className="task-box">
         <AllTask deletetask={this.deletetask} updatetask={this.updatetask} task={task}/> </div>
@@ -83,7 +83,7 @@ class Dash extends Component {
               <>
                 <div className="user-img"></div>
               </>
-              <spam className="user-name">Aquilas Aguiya </spam>
+              <spam className="user-name">{this.props.fullName }</spam>
               <spam className="user-title">Full-Stack Developer</spam>
               <hr />
               <div className="user-education">Education </div>
@@ -107,19 +107,19 @@ class Dash extends Component {
               <p className="cs">Customer Service</p>
               <p className="num">
                 {" "}
-                <i class="fa fa-phone" aria-hidden="true"></i> +1 646-552-5187{" "}
+                <i className="fa fa-phone" aria-hidden="true"></i> +1 646-552-5187{" "}
               </p>
               <p className="email">
-                <i class="fa fa-envelope-square"></i> Contact@gmail.com
+                <i className="fa fa-envelope-square"></i> Contact@gmail.com
               </p>
               <p className="cs">HR </p>
               <p className="num">
                 {" "}
-                <i class="fa fa-phone" aria-hidden="true"></i> +1 (646) 552-5187{" "}
+                <i className="fa fa-phone" aria-hidden="true"></i> +1 (646) 552-5187{" "}
               </p>
               <p className="email">
                 {" "}
-                <i class="fa fa-envelope-square"></i> Contact@gmail.com
+                <i className="fa fa-envelope-square"></i> Contact@gmail.com
               </p>
             </div>
           </div>
@@ -135,8 +135,8 @@ class Dash extends Component {
             </thead>
 
             <tbody>
-              <td> #123456</td>
-              <td> Aquilas Aguiya </td>
+              <td> {this.props.user.user_id}</td>
+              <td> {this.props.user.email} </td>
               <td>
                 <div className="tasks">{mappedtasks}</div>
               </td>
